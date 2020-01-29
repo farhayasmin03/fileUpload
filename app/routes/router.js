@@ -3,7 +3,7 @@ const router = express.Router();
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 var fs = require('fs');
-dbController = require('../controller/upload.controller')
+var dbController = require('../controller/upload.controller')
 var mongoose = require('mongoose');
 const multer = require('multer');
 const GridFsStorage = require('multer-gridfs-storage');
@@ -28,11 +28,17 @@ const upload = multer({
     storage
 });
 var db = mongoose.connection
+
 router.post('/upload', upload.single('name'), (req, res) => {
     res.json({
         file: req.file
     })
 
 });
+
+router.get('/search',dbController.search)
+
+router.get('/policy',dbController.findPolicy)   
+    
 
 module.exports = router;

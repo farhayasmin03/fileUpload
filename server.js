@@ -20,6 +20,7 @@ db.on('error', console.error.bind(console, 'connection error'));
 db.once('open', function () {
     console.log('mongoDB connected!!')
 });
+
 // define a simple route
 app.get('/', function (req, res) {
     res.send('insureMine');
