@@ -9,5 +9,5 @@
 6. Hit `http://localhost:3000`
 
 ## Functionalities
-1. This project is Node API  that is used to Serch data, Upload .csv file, Find data from MongoDB.
+1. This project is Node API  that is used to Search data, Upload .csv file, Find data from MongoDB.
 2. Postman is used in this project for performing integration testing with the API.
